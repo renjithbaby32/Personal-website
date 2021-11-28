@@ -14,6 +14,8 @@ Licence URI: https://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
@@ -324,10 +326,10 @@ Licence URI: https://www.os-templates.com/template-terms
 
 
           <ul class="faico clear">
-            <li><a class="faicon-facebook" href="https://www.facebook.com/renjithbabyofficial/"><i class="fab fa-facebook"></i></a></li>
+            <li><a class="faicon-facebook" href="https://www.facebook.com/renjithbabyofficial/" target="parent"><i class="fab fa-facebook"></i></a></li>
             <!-- <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li> -->
-            <li><a class="faicon-linkedin" href="https://www.linkedin.com/in/renjith-baby-296092205/"><i class="fab fa-linkedin"></i></a></li>
-            <li><a class="faicon-twitter" href="https://twitter.com/renjith_baby"><i class="fab fa-twitter"></i></a></li>
+            <li><a class="faicon-linkedin" href="https://www.linkedin.com/in/renjith-baby-296092205/" target="parent" ><i class="fab fa-linkedin"></i></a></li>
+            <li><a class="faicon-twitter" href="https://twitter.com/renjith_baby" target="parent" ><i class="fab fa-twitter"></i></a></li>
             <!-- <li><a class="faicon-vk" href="#"><i class="fab fa-vk"></i></a></li> -->
           </ul>
         </div>
@@ -344,13 +346,12 @@ Licence URI: https://www.os-templates.com/template-terms
         <div class="one_quarter">
           <h6 class="heading">Message us</h6>
           <p class="nospace btmspace-15">Please provide your E-mail address 1to get a response back</p>
-          <form action="#" method="post">
+          <form id="submit-form">
             <fieldset>
               <legend>Newsletter:</legend>
-              <input class="btmspace-15" type="text" value="" placeholder="Name" required>
-              <input class="btmspace-15" type="email" value="" placeholder="Email" required>
-              <input class="btmspace-15" type="text" value="" placeholder="Enter the enquiry" required>
-
+              <input class="btmspace-15" type="text" value="" placeholder="Name"  name="name">
+              <input class="btmspace-15" type="email" value="" placeholder="Email"  name="email">
+              <input class="btmspace-15" type="text" value="" placeholder="Enter the enquiry"  name="message">
               <button class="btn" type="submit" value="submit">Submit</button>
             </fieldset>
           </form>
@@ -409,5 +410,52 @@ Licence URI: https://www.os-templates.com/template-terms
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script>
+  $("#submit-form").submit((e)=>{
+      e.preventDefault()
+      $.ajax({
+          url:"https://script.google.com/macros/s/AKfycbyp6wyybwKKXHRp7Gs3ZYF-6IZ09IsLWlt3JTJhtRW0uEjOVuaoWH7FKmPFZuCVTc8s/exec",
+          data:$("#submit-form").serialize(),
+          method:"post",
+          success:function (response){
+              alert("Form submitted successfully")
+              window.location.reload()
+              //window.location.href="https://google.com"
+          },
+          error:function (err){
+              alert("Something Error")
+
+          }
+      })
+  })
+
+</script>
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+<script>
+$(document).ready(function()
+{
+  $("#submit-form").validate({
+    rules:{ 
+      name:
+      {
+        required:true,
+        minlength:5
+        
+      },
+      email:
+      {
+        required:true,
+
+      },
+      message:
+      {
+        required:true,
+      }
+    }
+  })
+})
+</script>
 </body>
 </html>
