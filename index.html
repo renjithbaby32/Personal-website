@@ -69,10 +69,10 @@ Licence URI: https://www.os-templates.com/template-terms
               <li><a href="#">Level 2</a></li>
             </ul> -->
           </li>
-          <li><a href="#">services</a></li>
-          <li><a href="#">Experience</a></li>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Get in contact</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#more">About Me</a></li>
+          <li><a href="#get">Get in contact</a></li>
         </ul>
         <!-- ################################################################################################ -->
       </nav>
@@ -118,14 +118,14 @@ Licence URI: https://www.os-templates.com/template-terms
           </article>
         </li>
         <li class="one_quarter">
-          <article><i class="fas fa-dove fa-4x"></i>
+          <article><i class="fas fa-dove fa-4x" style="height: 100px;"></i>
             <h6 class="heading">back-end solutions</h6>
             <p>Whether is it an e-commerce site or just a personal website, I've got your back</p>
             <footer><a class="btn" href="#">See Details</a></footer>
           </article>
         </li>
         <li class="one_quarter">
-          <article><i class="fas fa-marker fa-4x"></i>
+          <article><i class="fas fa-marker fa-4x" style="height: 100px;"></i>
             <h6 class="heading">Creative advice</h6>
             <p>Advice regarding the overall design and structure of the website, offered at very low cost.</p>
             <footer><a class="btn" href="#">See Details</a></footer>
@@ -134,7 +134,7 @@ Licence URI: https://www.os-templates.com/template-terms
         <li class="one_quarter">
           <article><i class="fas fa-ribbon fa-4x"></i>
             <h6 class="heading">Career advice</h6>
-            <p>Advice for individuals who plan on taking the web development pathway.Complete guidelines regarding the frameworks to choose,languages to master and necessary skills be learned.</p>
+            <p>Advice for individuals who plan on taking the web development pathway.Complete guidelines regarding the frameworks to choose and languages to master.</p>
             <footer><a class="btn" href="#">See Details</a></footer>
           </article>
         </li>
@@ -148,7 +148,7 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="bgded overlay" style="background-image:url('images/demo/backgrounds/1567666.png');">
+<div class="bgded overlay" style="background-image:url('images/demo/backgrounds/1567666.png');" id="more">
   <section class="hoc container clear">
     <div class="points group"> 
       <!-- ################################################################################################ -->
@@ -249,8 +249,8 @@ Licence URI: https://www.os-templates.com/template-terms
   <section class="hoc container clear"> 
     <!-- ################################################################################################ -->
     <div class="sectiontitle">
-      <p class="nospace font-xs">Phasellus eget sem quis elit</p>
-      <h6 class="heading font-x2">Ultricies porta donec imperdiet</h6>
+      <!-- <p class="nospace font-xs">Phasellus eget sem quis elit</p>
+      <h6 class="heading font-x2">Ultricies porta donec imperdiet</h6> -->
     </div>
     <ul id="latest" class="nospace group sd-third">
       <li class="one_third first">
@@ -320,6 +320,9 @@ Licence URI: https://www.os-templates.com/template-terms
       <div class="group btmspace-50">
         <div class="one_quarter first">
           <h6 class="heading">About me</h6>
+          <p>I have a passion for programming. It's through Youtube that I found out about Brototype(Crossroads at the time) and decided to learn from there. It turns out to be the best decision I have ever taken in my life.</p>
+          <p>I would encourage anyone who has a liking to this field to contact me personally using the contact details given here. I would love to help them start their journey.</p>
+          <p>I also give a 100% percentage money back guarantee if my service does not meet your expectatation</p>
           <p>You can find my social media links below. Feel free to connect with me on social media. </p>
           <p>E-mail: renjithbabyofficial@gmail.com</p>
           <p>Address: Edasseril house, Poodamkallu, Rajapuram P.O, Kanhangad, Kasaragodu district, PIN:671532</p>
@@ -336,24 +339,36 @@ Licence URI: https://www.os-templates.com/template-terms
         <div class="one_quarter">
           <h6 class="heading">Quick jump to</h6>
           <ul class="nospace linklist">
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Experience</a></li>
-            <li><a href="#">Get in contact</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#get">Get in contact</a></li>
             <!-- <li><a href="#">Natoque penatibus et magnis</a></li>
             <li><a href="#">Dis parturient montes</a></li> -->
           </ul>
         </div>
-        <div class="one_quarter">
+        <div class="one_quarter" id="get">
           <h6 class="heading">Message us</h6>
           <p class="nospace btmspace-15">Please provide your E-mail address 1to get a response back</p>
-          <form id="submit-form">
-            <fieldset>
-              <legend>Newsletter:</legend>
-              <input class="btmspace-15" type="text" value="" placeholder="Name"  name="name">
-              <input class="btmspace-15" type="email" value="" placeholder="Email"  name="email">
-              <input class="btmspace-15" type="text" value="" placeholder="Enter the enquiry"  name="message">
-              <button class="btn" type="submit" value="submit">Submit</button>
-            </fieldset>
+          <form action="" id="submit-form">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="name">Your Name</label>
+                <input type="text" name="name" class="form-control" id="name">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name">Your Email</label>
+                <input type="email" class="form-control" name="email" id="email" >
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="name">Phone Number</label>
+              <input type="text" class="form-control" name="PhoneNumber" id="subject">
+            </div>
+            <div class="form-group">
+              <label for="name">Message</label>
+              <textarea class="form-control btmspace-15" name="message" id="message" rows="10" style="width: 100%;background-color: rgba(255,255,255,.2); color: #FFFFFF; border:0px; border-radius: 15px;"></textarea>
+            </div>
+            <div class="text-center"><button type="submit" class="button-form">Send Message</button></div>
           </form>
         </div>
         <div class="one_quarter">
@@ -410,52 +425,72 @@ Licence URI: https://www.os-templates.com/template-terms
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
-<script>
-  $("#submit-form").submit((e)=>{
-      e.preventDefault()
-      $.ajax({
-          url:"https://script.google.com/macros/s/AKfycbyp6wyybwKKXHRp7Gs3ZYF-6IZ09IsLWlt3JTJhtRW0uEjOVuaoWH7FKmPFZuCVTc8s/exec",
-          data:$("#submit-form").serialize(),
-          method:"post",
-          success:function (response){
-              alert("Form submitted successfully")
-              window.location.reload()
-              //window.location.href="https://google.com"
-          },
-          error:function (err){
-              alert("Something Error")
-
-          }
-      })
-  })
-
-</script>
 <script src="script.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
-<script>
-$(document).ready(function()
-{
-  $("#submit-form").validate({
-    rules:{ 
-      name:
-      {
-        required:true,
-        minlength:5
-        
-      },
-      email:
-      {
-        required:true,
+<script src="assets/js/main.js"></script>
+  <script>
+    $("#submit-form").submit(function (){
+    if($(this).valid()){
 
-      },
-      message:
-      {
-        required:true,
-      }
-    }
-  })
+      $("#submit-form").submit((e)=>{
+        e.preventDefault()
+
+        $.ajax({
+        url:"https://script.google.com/macros/s/AKfycbyp6wyybwKKXHRp7Gs3ZYF-6IZ09IsLWlt3JTJhtRW0uEjOVuaoWH7FKmPFZuCVTc8s/exec",
+        data:$("#submit-form").serialize(),
+        method:"post",
+      success:function (response){
+        alert("Form submitted successfully")
+        window.location.reload()
+        //window.location.href="https://google.com"
+    },
+  
+    error:function (err){
+      alert("Something Error")
+  }
 })
+}) 
+$("#loading").show()};
+});
+
+
+$(document).ready(function(){
+
+
+
+   $("#submit-form").validate({
+
+         rules:{
+          name:{
+                required:true,
+                minlength:3,
+               
+                },
+                email:{
+                  required:true,
+                  email
+                  },
+                  PhoneNumber:{
+                   required:true,
+                   number:true,
+                   minlength:10,
+                   maxlength:10
+
+                 }, 
+                 message:{ 
+                  required:true,
+                  minlength:40
+          }  
+         }
+         })
+      })
+
+      $('#submitbutton').on('click', function() {
+        $("#submit-form").valid();
+    });
 </script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
 </body>
 </html>
