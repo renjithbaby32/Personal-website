@@ -353,7 +353,7 @@ Licence URI: https://www.os-templates.com/template-terms
             <div class="row">
               <div class="form-group col-md-6">
                 <label for="name">Your Name</label>
-                <input type="text" name="name" class="form-control" id="name">
+                <input type="text" name="name" class="form-control" onkeypress="return/[a-z A-A-Z]/i.test(event.key)" id="name">
               </div>
               <div class="form-group col-md-6">
                 <label for="name">Your Email</label>
@@ -465,6 +465,7 @@ $(document).ready(function(){
           name:{
                 required:true,
                 minlength:3,
+                // lettersonly: true
                
                 },
                 email:{
